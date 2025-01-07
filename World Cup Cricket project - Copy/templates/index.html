@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket AI Bot</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #fff;
+        text-align: center;
+        animation: backgroundChange 80s infinite; /* Adds animation */
+        background-size: cover; /* Ensures image covers the entire background */
+        background-position: center; /* Centers the background image */
+        background-repeat: no-repeat; /* Ensures no repetition of images */
+      }
+
+      @keyframes backgroundChange {
+        0% {
+          background-image: url("/static/images/background1.jpg");
+          opacity: 1;
+        }
+        15% {
+          background-image: url("/static/images/background2.jpg");
+          opacity: 1;
+        }
+        30% {
+          background-image: url("/static/images/background5.jpg");
+          opacity: 1;
+        }
+        45% {
+          background-image: url("/static/images/background6.jpg");
+          opacity: 1;
+        }
+        70% {
+          background-image: url("/static/images/background7.jpg");
+          opacity: 1;
+        }
+        100% {
+          background-image: url("/static/images/background8.jpg");
+          opacity: 1;
+        }
+      }
+
+      #container {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        width: 100%;
+      }
+
+      #search-bar {
+        width: 80%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      #submit-button {
+        padding: 10px 15px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #response {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+
+      #container {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        width: 100%;
+      }
+      #search-bar {
+        width: 80%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+      }
+      #submit-button {
+        padding: 10px 15px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #response {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+
+      .photo-link {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Cricket AI Bot</h1>
+      <form id="search-form">
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="Ask a cricket question..."
+          required
+        />
+        <button type="submit" id="submit-button">Ask</button>
+      </form>
+      <div id="response"></div>
+    </div>
+    <script>
+      document
+        .querySelector("#search-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const question = document.querySelector("#search-bar").value;
+          const responseElement = document.querySelector("#response");
+
+          const response = await fetch("/ask", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question }),
+          });
+
+          const data = await response.json();
+          if (data.answer) {
+            responseElement.innerHTML = data.answer;
+          } else {
+            responseElement.textContent =
+              "Error: Unable to process the question.";
+          }
+        });
+    </script>
+  </body>
+</html>

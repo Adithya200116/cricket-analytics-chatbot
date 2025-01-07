@@ -1,0 +1,47 @@
+Who won the World cup?
+
+
+
+Batting Specific Questions
+How many runs did Virat Kohli score?
+How many runs were scored in Match 5?
+What is the strike rate of Virat Kohli?
+Who batted in Match 2?
+Who were the batsmen in Match 1?
+What is the total runs scored by England in this Match 5?
+How many sixes did Dawid Malan hit?
+How many fours did Moeen Ali hit?
+What was Jonny Bairstow's batting position?
+What is Harry Brook's strike rate?
+How many runs did Joe Root score?
+How many balls faced by Virat Kohli?
+batsmen in match 5?
+How many runs were conceded in Match 1?
+batting position of Virat Kohli?
+how did virat kohli got out?
+
+
+
+Bowler-Specific Questions
+Best performance of jasprit bumrah?
+How many runs did Trent Boult concede?
+How many runs given by did Trent Boult?
+How many wickets did Matt Henry take?
+What is Mitchell Santner's economy rate?
+How many overs did Jimmy Neesham bowl?
+How many maiden overs did Glenn Phillips bowl?
+What was Rachin Ravindra's best performance?
+What is Sam Curran's total economy across matches?
+How many total wickets has Chris Woakes taken in all matches?
+how many runs given by jasprit bumrah?
+
+
+
+Match specific Questions:
+match details of match 1?
+Who won in Match 1?
+when and where did Match 1 happend?
+which teams played in Match 1?
+Team innings for India?
+details of Virat kohli?
+Player details fo Rohit Sharma?
